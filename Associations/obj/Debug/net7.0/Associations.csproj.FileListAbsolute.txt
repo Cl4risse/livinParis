@@ -1,0 +1,14 @@
+C:\Users\clari\Documents\A2\Projet info\Associations\obj\Debug\net7.0\Associations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\clari\Documents\A2\Projet info\Associations\obj\Debug\net7.0\Associations.AssemblyInfoInputs.cache
+C:\Users\clari\Documents\A2\Projet info\Associations\obj\Debug\net7.0\Associations.AssemblyInfo.cs
+C:\Users\clari\Documents\A2\Projet info\Associations\obj\Debug\net7.0\Associations.csproj.CoreCompileInputs.cache
+C:\Users\clari\Documents\A2\Projet info\Associations\bin\Debug\net7.0\Associations.exe
+C:\Users\clari\Documents\A2\Projet info\Associations\bin\Debug\net7.0\Associations.deps.json
+C:\Users\clari\Documents\A2\Projet info\Associations\bin\Debug\net7.0\Associations.runtimeconfig.json
+C:\Users\clari\Documents\A2\Projet info\Associations\bin\Debug\net7.0\Associations.dll
+C:\Users\clari\Documents\A2\Projet info\Associations\bin\Debug\net7.0\Associations.pdb
+C:\Users\clari\Documents\A2\Projet info\Associations\obj\Debug\net7.0\Associations.dll
+C:\Users\clari\Documents\A2\Projet info\Associations\obj\Debug\net7.0\refint\Associations.dll
+C:\Users\clari\Documents\A2\Projet info\Associations\obj\Debug\net7.0\Associations.pdb
+C:\Users\clari\Documents\A2\Projet info\Associations\obj\Debug\net7.0\Associations.genruntimeconfig.cache
+C:\Users\clari\Documents\A2\Projet info\Associations\obj\Debug\net7.0\ref\Associations.dll
