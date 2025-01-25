@@ -1,0 +1,31 @@
+Sub Create_Tables()
+
+DoCmd.RunSQL "CREATE TABLE Tiers(" & _
+   "IDTiers COUNTER," & _
+   "Nom VARCHAR(50) NOT NULL," & _
+   "Prenom VARCHAR(25) NOT NULL," & _
+   "Adresse VARCHAR(50) NOT NULL," & _
+   "CodePostal VARCHAR(6) NOT NULL," & _
+   "Ville VARCHAR(50)," & _
+   "Email VARCHAR(50) NOT NULL," & _
+   "Telephone BIGINT," & _
+   "PRIMARY KEY(IDTiers)," & _
+   "UNIQUE(Email)," & _
+   "UNIQUE(Telephone)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Client(" & _
+   "IDTiers INT," & _
+   "TypeC VARCHAR(50) NOT NULL," & _
+   "PRIMARY KEY(IDTiers)," & _
+   "FOREIGN KEY(IDTiers) REFERENCES Tiers(IDTiers)" & _
+");"   
+
+DoCmd.RunSQL "CREATE TABLE Cuisinier(" & _
+   "IDTiers INT," & _
+   "Note DECIMAL(15,2)," & _
+   "PRIMARY KEY(IDTiers)," & _
+   "FOREIGN KEY(IDTiers) REFERENCES Tiers(IDTiers)" & _
+");"   
+
+End Sub
