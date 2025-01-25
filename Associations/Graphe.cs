@@ -17,7 +17,7 @@ namespace Associations
             ReadFile(filename);
         }
 
-
+#region Proprietes
         public Noeud[] Sommets
         {
             get { return sommets; }
@@ -30,6 +30,7 @@ namespace Associations
             get { return liens; }
             set { liens = value; }
         }
+#endregion
 
         public Graphe ReadFile(string filename)
         {
@@ -77,6 +78,12 @@ namespace Associations
             
             return graphe;
         }
+
+
+        public GenererListeAdjacence(){
+            
+        }
+
 
         public bool NoeudExiste()
         {
