@@ -81,7 +81,12 @@ namespace Associations
 
 
         public Dictionary<Noeud,List<Noeud>> GenererListeAdjacence(){
-             Dictionary<Noeud,List<Noeud>> lAdjacence =null;
+             Dictionary<Noeud,List<Noeud>> lAdjacence = new Dictionary<Noeud,List<Noeud>>();
+
+            for (int sommet = 0; sommet<sommets.Length;sommet++){
+                //append list
+            }
+
              return lAdjacence;
             }
 
