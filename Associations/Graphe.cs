@@ -80,9 +80,10 @@ namespace Associations
         }
 
 
-        public GenererListeAdjacence(){
-            
-        }
+        public Dictionary<Noeud,List<Noeud>> GenererListeAdjacence(){
+             Dictionary<Noeud,List<Noeud>> lAdjacence =null;
+             return lAdjacence;
+            }
 
 
         public bool NoeudExiste()
