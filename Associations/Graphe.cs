@@ -8,10 +8,10 @@ namespace Associations
 {
     internal class Graphe
     {
-        public Noeud[] sommets;
-        public Lien[] liens;
+        public Noeud[] sommets; //liste des sommets
+        public Lien[] liens; //liste des arrêtes
 
-        public Graphe() { }
+        public Graphe() { } 
         public Graphe(string filename)
         {
             ReadFile(filename);
@@ -34,8 +34,8 @@ namespace Associations
 
         public Graphe ReadFile(string filename)
         {
-            Graphe graphe = new Graphe();
-            Noeud noeud = new Noeud();
+            //Graphe graphe = new Graphe();
+            //Noeud noeud = new Noeud();
             string[] lines = null;
             if (filename != null)
             {
@@ -81,7 +81,7 @@ namespace Associations
 
 
         public Dictionary<Noeud,List<Noeud>> GenererListeAdjacence(){
-             Dictionary<Noeud,List<Noeud>> lAdjacence = new Dictionary<Noeud,List<Noeud>>();
+            Dictionary<Noeud,List<Noeud>> lAdjacence = new Dictionary<Noeud,List<Noeud>>();
 
             for (int sommet = 0; sommet<sommets.Length;sommet++){
                 //append list
