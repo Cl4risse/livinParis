@@ -34,8 +34,8 @@ namespace Associations
 
         public Graphe ReadFile(string filename)
         {
-            //Graphe graphe = new Graphe();
-            //Noeud noeud = new Noeud();
+            Graphe graphe = new Graphe();
+            Noeud noeud = new Noeud();
             string[] lines = null;
             if (filename != null)
             {
