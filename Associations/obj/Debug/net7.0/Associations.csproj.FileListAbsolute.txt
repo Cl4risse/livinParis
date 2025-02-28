@@ -26,3 +26,17 @@ C:\Users\clari\Documents\A2\Projet info\livinParis\Associations\obj\Debug\net7.0
 C:\Users\clari\Documents\A2\Projet info\livinParis\Associations\obj\Debug\net7.0\Associations.pdb
 C:\Users\clari\Documents\A2\Projet info\livinParis\Associations\obj\Debug\net7.0\Associations.genruntimeconfig.cache
 C:\Users\clari\Documents\A2\Projet info\livinParis\Associations\obj\Debug\net7.0\ref\Associations.dll
+C:\Users\lucas\OneDrive - De Vinci\Cours\A2_S2\Informatique\livinParis\Associations\bin\Debug\net7.0\Associations.exe
+C:\Users\lucas\OneDrive - De Vinci\Cours\A2_S2\Informatique\livinParis\Associations\bin\Debug\net7.0\Associations.deps.json
+C:\Users\lucas\OneDrive - De Vinci\Cours\A2_S2\Informatique\livinParis\Associations\bin\Debug\net7.0\Associations.runtimeconfig.json
+C:\Users\lucas\OneDrive - De Vinci\Cours\A2_S2\Informatique\livinParis\Associations\bin\Debug\net7.0\Associations.dll
+C:\Users\lucas\OneDrive - De Vinci\Cours\A2_S2\Informatique\livinParis\Associations\bin\Debug\net7.0\Associations.pdb
+C:\Users\lucas\OneDrive - De Vinci\Cours\A2_S2\Informatique\livinParis\Associations\obj\Debug\net7.0\Associations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\OneDrive - De Vinci\Cours\A2_S2\Informatique\livinParis\Associations\obj\Debug\net7.0\Associations.AssemblyInfoInputs.cache
+C:\Users\lucas\OneDrive - De Vinci\Cours\A2_S2\Informatique\livinParis\Associations\obj\Debug\net7.0\Associations.AssemblyInfo.cs
+C:\Users\lucas\OneDrive - De Vinci\Cours\A2_S2\Informatique\livinParis\Associations\obj\Debug\net7.0\Associations.csproj.CoreCompileInputs.cache
+C:\Users\lucas\OneDrive - De Vinci\Cours\A2_S2\Informatique\livinParis\Associations\obj\Debug\net7.0\Associations.dll
+C:\Users\lucas\OneDrive - De Vinci\Cours\A2_S2\Informatique\livinParis\Associations\obj\Debug\net7.0\refint\Associations.dll
+C:\Users\lucas\OneDrive - De Vinci\Cours\A2_S2\Informatique\livinParis\Associations\obj\Debug\net7.0\Associations.pdb
+C:\Users\lucas\OneDrive - De Vinci\Cours\A2_S2\Informatique\livinParis\Associations\obj\Debug\net7.0\Associations.genruntimeconfig.cache
+C:\Users\lucas\OneDrive - De Vinci\Cours\A2_S2\Informatique\livinParis\Associations\obj\Debug\net7.0\ref\Associations.dll

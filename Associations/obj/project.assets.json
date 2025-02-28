@@ -8,23 +8,23 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\clari\\.nuget\\packages\\": {},
+    "C:\\Users\\lucas\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\clari\\Documents\\A2\\Projet info\\livinParis\\Associations\\Associations.csproj",
+      "projectUniqueName": "C:\\Users\\lucas\\OneDrive - De Vinci\\Cours\\A2_S2\\Informatique\\livinParis\\Associations\\Associations.csproj",
       "projectName": "Associations",
-      "projectPath": "C:\\Users\\clari\\Documents\\A2\\Projet info\\livinParis\\Associations\\Associations.csproj",
-      "packagesPath": "C:\\Users\\clari\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\clari\\Documents\\A2\\Projet info\\livinParis\\Associations\\obj\\",
+      "projectPath": "C:\\Users\\lucas\\OneDrive - De Vinci\\Cours\\A2_S2\\Informatique\\livinParis\\Associations\\Associations.csproj",
+      "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lucas\\OneDrive - De Vinci\\Cours\\A2_S2\\Informatique\\livinParis\\Associations\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\clari\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
