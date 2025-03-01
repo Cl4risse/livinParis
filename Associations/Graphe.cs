@@ -73,9 +73,22 @@ namespace Associations
 
         public Dictionary<Noeud,List<Noeud>> GenererListeAdjacence(){
             Dictionary<Noeud,List<Noeud>> lAdjacence = new Dictionary<Noeud,List<Noeud>>();
-
-            for (int sommet = 0; sommet<sommets.Length;sommet++){
-                //append list
+            List<Noeud> noeudsAdjacents = new List<Noeud>();
+            for (int i = 0; i<sommets.Length;i++)
+            {
+                foreach (Lien l in liens)
+                {
+                    if(l.n1 == sommets[i])
+                    {
+                        noeudsAdjacents.Add(l.n2);
+                    }
+                    else if(l.n2 == sommets[i])
+                    {
+                        noeudsAdjacents.Add(l.n1);
+                    }
+                }
+                lAdjacence.Add(sommets[i],noeudsAdjacents);
+                noeudsAdjacents.Clear();
             }
 
              return lAdjacence;
