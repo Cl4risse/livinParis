@@ -5,6 +5,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using SkiaSharp;
+
 
 namespace Associations
 {
@@ -199,7 +202,141 @@ namespace Associations
             return Visitees;
         }
 
+        public bool contientCycle(int[][] matriceAdj,Noeud noeud)
+        {
+            int n = matriceAdj.Length;
+            Queue<Noeud> fileNoeuds = new Queue<Noeud>();
+            bool[] visitees = new bool[n];
+            visitees[noeud.num] = true;
 
+            Noeud[] parent = new Noeud[n];
 
+            parent[noeud.num] = noeud;
+
+            fileNoeuds.Enqueue(noeud);
+            while (fileNoeuds.Count()>0)
+            {
+                Noeud courant = fileNoeuds.Dequeue();
+                visitees[courant.num] = true;
+                for(int i = 0; i < n; i++)
+                {
+                    if (matriceAdj[courant.num][i] > 0 && visitees[i] == false)
+                    {
+                        fileNoeuds.Enqueue(sommets[i]);
+                        visitees[i] = true;
+
+                        //parent de i et le noeud courant
+                        parent[sommets[i].num] = courant;
+                    }
+                    else if (matriceAdj[courant.num][i]>0 && visitees[i]==true && parent[courant.num] != sommets[i])
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public void InitialiserCoordonnees(int maxX, int maxY)
+        {
+            Random random = new Random();
+            foreach(Noeud n in sommets)
+            {
+                n.AjouterCoords(random.Next(4000, maxX), random.Next(4000, maxY));
+            }
+        }
+
+        public void InitialiserValeursConnues()
+        {
+            List<int> l1 = new List<int>
+            {
+            4447, 5218, 5527, 5156, 5403, 4507, 5317, 4679, 4057, 4619, 4704, 5175,
+            4542, 5794, 5142, 4747, 4334, 5987, 5561, 4994, 5235, 4843, 4205, 4340,
+            4383, 5906, 5118, 5868, 5352, 5441, 5229, 4391, 4978, 4123
+            };
+
+            // List l2 with given values
+            List<int> l2 = new List<int>
+            {
+            4118, 4234, 4175, 4738, 4673, 5816, 4515, 5378, 4758, 4634, 5182, 5333,
+            4683, 4921, 5460, 5745, 4668, 4567, 4408, 4424, 4342, 4149, 5691, 5591,
+            4469, 4729, 4662, 5379, 4460, 4235, 5231, 5792, 5053, 4484
+            };
+
+            foreach (Noeud n in sommets)
+            {
+                n.AjouterCoords(l1[n.num-1], l2[n.num-1]);
+            }
+        }
+
+        public void CoordsParForceDirigee(int E, int K, int l, double D)
+        {
+            int t = 1;
+            Dictionary<Noeud, int[]> Forces = new Dictionary<Noeud, int[]>();
+            int maxforce = E + 1;
+
+            while (t < K && maxforce > E)
+            {
+                maxforce = 1;
+                foreach(Noeud n in sommets) 
+                {
+                    int[] SfRep = sumForceRepulsives(n, l);
+                    int[] SfAttr = sumForcesAttractives(n, l);
+                    Forces[n] = new int[] { SfRep[0]+SfAttr[0], SfRep[1]+SfAttr[1] };
+                    int Fx = Forces[n][0];
+                    int Fy = Forces[n][1];
+                    int F = (int)Math.Sqrt(Fx * Fx + Fy * Fy);
+                    if ( F > maxforce) { maxforce = F; }
+                }
+                foreach(Noeud n in sommets)
+                {
+                    D = D * D;
+                    n.AjouterCoords(n.x + (int)((double)Forces[n][0]*D)/maxforce, n.y + (int)((double)Forces[n][1]*D)/maxforce);
+                }
+                t++;
+            }
+        }
+
+        public int[] sumForceRepulsives(Noeud u, int l)
+        {
+            double forceX = 0;
+            double forceY = 0;
+            foreach (Noeud v in sommets)
+            {
+                if (v != u && !ListeAdj[u].Contains(v))
+                {
+                    //Coords de pv - pu
+                    int pv_puX = (u.x - v.x);
+                    int pv_puY = (u.y - v.y);
+                    //Distance 
+                    double dist = Math.Sqrt(pv_puX * pv_puX + pv_puY * pv_puY);
+
+                    forceX += (l * l / dist) * pv_puX;
+                    forceY += (l * l / dist) * pv_puY;
+                }
+            }
+            return new int[] { (int)forceX, (int)forceY };
+        }
+
+        public int[] sumForcesAttractives(Noeud u, int l)
+        {
+            double forceX = 0;
+            double forceY = 0;
+            foreach (Noeud v in ListeAdj[u])
+            {
+                if (v != u)
+                {
+                    //Coords de pv - pu
+                    int pv_puX = (v.x - u.x);
+                    int pv_puY = (v.y - u.y);
+                    //Distance 
+                    double dist = Math.Sqrt(pv_puX * pv_puX + pv_puY * pv_puY);
+
+                    forceX += (dist*dist / l) * pv_puX;
+                    forceY += (dist*dist / l) * pv_puY; 
+                }
+            }
+            return new int[] { (int)forceX, (int)forceY };
+        }
     }
 }
