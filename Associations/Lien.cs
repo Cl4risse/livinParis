@@ -10,12 +10,11 @@ namespace Associations
     {
         public Noeud n1;
         public Noeud n2;
-        public Lien() { }
 
-        public Lien(string a, string b)
+        public Lien(Noeud a, Noeud b)
         {
-            n1 = new Noeud(a);
-            n2 = new Noeud(b);
+            n1 = a;
+            n2 = b;
         }
 
         public void AfficheL()
