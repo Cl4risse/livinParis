@@ -1,0 +1,3 @@
+﻿Numero Commande;Numero Cuisinier;Numero Client;Nom;Prix;Quantite;Plat;Date_Fabrication;Date_Peremption;Régime;Nature;Ingrédient_1;Volume_1;Ingrédient_2;Volume_2;Ingrédient_3;Volume_3;Ingrédient_4;Volume_4
+1;1;1;Raclette;10;6;Plat;10/01/2025;15/01/2025;;Française;raclette fromage;250g;pommes_de_terre;200g;jambon;200g;cornichon;3p
+2;1;1;Salade de fruit;5;6;Dessert;10/01/2025;15/01/2025;Végétarien;Indifférent;fraise;100g;kiwi;100g;sucre;10g;;
